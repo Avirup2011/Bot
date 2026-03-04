@@ -12,9 +12,9 @@
   "devDependencies": {
     "node": "^16.15.1"
   },
-"scripts": {
+  "scripts": {
   "start": "node bot.js"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/urfate/afk-bot.git"
