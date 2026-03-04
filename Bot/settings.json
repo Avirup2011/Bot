@@ -1,13 +1,12 @@
 {
   "bot-account": {
     "username": "NuttellaHUB",
-    "password": "",
-    "type": "mojang"
+    "type": "offline"
   },
 
   "server": {
     "ip": "Avirupserver.aternos.me",
-    "port":12294,
+    "port": 12294,
     "version": "1.18.2"
   },
 
@@ -21,8 +20,8 @@
   "utils": {
     "auto-auth": {
       "enabled": true,
-      "password": "yassinehzz$is$the$best" 
-    }, 
+      "password": "yassinehzz$is$the$best"
+    },
 
     "anti-afk": {
       "enabled": true,
@@ -33,12 +32,11 @@
       "enabled": true,
       "repeat": true,
       "repeat-delay": 60,
-
       "messages": [
         "NuttellaTeam",
         "~NuttellaTeam~",
         "NuttellaTeam",
-          "NuttellaTeam",
+        "NuttellaTeam",
         "{NuttellaTeam}",
         "NuttellaTeam",
         "NuttellaTeamm"
