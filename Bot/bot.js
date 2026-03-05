@@ -32,14 +32,29 @@ function createBot() {
       console.log('🔑 Auto-auth executed');
     }
 
-    // Anti-AFK movement (just jump if enabled)
-    if(config.utils['anti-afk'].enabled){
-      setInterval(() => {
-        bot.setControlState('jump', true);
-        setTimeout(() => bot.setControlState('jump', false), 500);
-      }, 30000);
-      console.log('🛡 Anti-AFK active');
-    }
+// Anti-AFK random walking
+if(config.utils['anti-afk'].enabled){
+
+  function randomWalk(){
+    const pos = bot.entity.position;
+
+    const x = pos.x + Math.floor(Math.random() * 10 - 5);
+    const y = pos.y;
+    const z = pos.z + Math.floor(Math.random() * 10 - 5);
+
+    const goal = new GoalBlock(x, y, z);
+    bot.pathfinder.setGoal(goal);
+
+    console.log(`🚶 Walking to ${x}, ${y}, ${z}`);
+
+    // Walk again after some time
+    setTimeout(randomWalk, 20000 + Math.random() * 15000);
+  }
+
+  setTimeout(randomWalk, 10000);
+  console.log('🛡 Smart Anti-AFK walking enabled');
+}
+
 
     // Chat messages
     if(config.utils['chat-messages'].enabled){
